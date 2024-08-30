@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/Spoqa/SpoqaHanSansNeo-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+/* 단위 rem으로 쓰기 위해 html 폰트 사이즈 잡아두기 */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "SpoqaHanSansNeo-Regular";
+  font-size: 1.6rem;
+  color: #121314;
+}
+
+strong {
+  font-family: "SpoqaHanSansNeo-Bold";
+}
+
+.wrap {
+  /* width: 120rem; */
+  display: flex;
+  gap: 8.5%;
+  max-width: calc(100% - 2rem);
+  margin-top: 24rem auto;
+}
+
+.section-text h1 {
+  font-size: 7rem;
+  word-break: keep-all;
+  font-weight: normal;
+}
+
+.section-text p {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #47494d;
+  /* 백분율로 line-height 적용 30이니까 20의 1.5배 */
+  line-height: 1.5;
+}
+
+/* ------------- 섹션필드 ------------- */
+
+.section-field {
+  flex-basis: 40.5%;
+  flex-shrink: 0;
+}
+
+.section-field ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-field ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15.2rem;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 4rem 3rem 3rem 4rem;
+  color: white;
+  border-radius: 2rem;
+  box-sizing: border-box;
+}
+
+.field-video a {
+  background-image: url(src/Rectangle\ 2.png);
+}
+.field-books a {
+  background-image: url(src/Rectangle\ 3.png);
+}
+.section-field .field-title {
+  font-family: "SpoqaHanSansNeo-Bold";
+  font-size: 3rem;
+}
+.section-field .field-go {
+  text-align: right;
+  padding-right: 2rem;
+  background-image: url(src/icon-_.png);
+  background-repeat: no-repeat;
+  background-position: right 50%;
+  background-size: 2rem;
+}
+
+@media (max-width: 1919px) {
+  .wrap {
+    flex-direction: column;
+    gap: 6rem;
+  }
+  .section-field ul {
+    flex-direction: row;
+  }
+  .section-field ul li {
+    /* 비율 유지 */
+    flex: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrap {
+    gap: 4rem;
+  }
+  .section-field ul {
+    flex-direction: column;
+  }
+}
