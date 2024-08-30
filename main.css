@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/Spoqa/SpoqaHanSansNeo-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  font-family: "SpoqaHanSansNeo-Regular";
+  vertical-align: middle;
+}
+
+main {
+  /* width: 100vw; */
+  display: grid;
+  /* justify-content: left; */
+  justify-content: center;
+  align-content: center;
+
+  margin-top: 240px;
+  margin-left: 360px;
+}
+
+section {
+  font-size: 70px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: 0;
+  align-items: 0;
+  grid-area: introduce;
+  margin-right: 102px;
+}
+
+section .introduce {
+  word-break: keep-all;
+  flex-direction: column;
+}
+.introduce h2 {
+  color: #121314;
+}
+.introduce span {
+  font-family: "SpoqaHanSansNeo-Bold";
+}
+.introduce p {
+  color: #47494d;
+  font-size: 20px;
+  margin-top: 1em;
+}
+
+/* 소개문구 끝 */
+article {
+  font-size: 30px;
+  font-weight: bold;
+
+  position: relative;
+
+  width: 486px;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  margin-right: 360px;
+  margin-bottom: 20px;
+}
+
+article .content {
+  grid-area: content;
+}
+article > .books {
+  grid-area: books;
+}
+article h3 {
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+article p {
+  font-size: 16px;
+  font-weight: normal;
+
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  right: 54px;
+}
+article .going {
+  position: absolute;
+  bottom: 28px;
+  right: 30px;
+}
+
+/* 모바일 */
+@media (min-width: 390px) and (max-width: 767px) {
+  main {
+    grid-template-areas:
+      "introduce"
+      "content"
+      "books";
+    margin-top: 100px;
+    /* margin-left: 16px; */
+  }
+  section {
+    margin-bottom: 40px;
+  }
+
+  section h2 {
+    font-size: 36px;
+  }
+
+  article {
+    width: 356px;
+    height: 205px;
+    font-size: 20px;
+  }
+}
+
+/* 모바일 끝 탭 시작 */
+@media (min-width: 768px) and (max-width: 1919px) {
+  main {
+    grid-template-areas:
+      "introduce introduce"
+      "content books";
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  section {
+    margin-bottom: 60px;
+  }
+
+  .introduce p {
+    font-size: 18px;
+  }
+
+  article {
+    font-size: 24px;
+
+    width: 344px;
+    height: 198px;
+    border-radius: 20px;
+
+    position: relative;
+
+    margin-right: 20px;
+  }
+  article h3 {
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+}
+
+/* 탭 끝 데스크탑 시작 */
+@media (min-width: 1920px) {
+  main {
+    grid-template-areas:
+      "introduce content"
+      "introduce books";
+  }
+}
